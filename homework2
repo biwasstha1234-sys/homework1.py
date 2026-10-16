@@ -1,0 +1,17 @@
+'''
+This homework defines one method, called "arithmetic".
+To see the docstring of that method, type `help homework2.arithmetic`.
+'''
+
+def arithmetic(x, y):
+    
+    if isinstance(y, str):
+        if isinstance(x, str):
+            return x + y
+        else:
+            return str(x) + y
+    else:
+        if isinstance(x, str):
+            return x * int(y)
+        else:
+            return x * y
