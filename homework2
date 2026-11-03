@@ -1,17 +1,12 @@
-'''
-This homework defines one method, called "arithmetic".
-To see the docstring of that method, type `help homework2.arithmetic`.
-'''
-
 def arithmetic(x, y):
-    
-    if isinstance(y, str):
-        if isinstance(x, str):
+  
+    if isinstance(x, str):
+        if isinstance(y, str):
             return x + y
-        else:
-            return str(x) + y
-    else:
-        if isinstance(x, str):
+        else:  # y is a float
             return x * int(y)
-        else:
+    else:  # x is a float
+        if isinstance(y, str):
+            return str(x) + y
+        else:  # y is a float
             return x * y
